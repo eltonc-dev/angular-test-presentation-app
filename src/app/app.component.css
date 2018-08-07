@@ -1,0 +1,27 @@
+* {
+  font-family: Arial, Helvetica;
+}
+.title-box {
+  background-color: #E61A58;
+  color: white;
+  padding: 20px;
+  font-family: arial;
+}
+
+.title-box h1 {
+  font-size: 40px;
+  width: auto;
+  display: inline-block;
+}
+.title-box h4 {
+  font-size: 15px;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.subtitle-box {
+  color: #CBCBCB;
+  font-size: 14px;
+  padding: 20px;
+  font-family: arial;
+}
