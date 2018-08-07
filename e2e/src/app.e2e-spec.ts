@@ -9,6 +9,26 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to TestePresentationApp!');
+    expect(page.getParagraphText()).toContain('Testes & Angular');
+  });
+
+  it('should display increaseComponent when increase clicked', () => {
+    page.clickIncreaseButton().then(() => {
+      expect(page.getIncreaseComponent).toBeTruthy();
+    });
+  });
+
+  it('should increase 1 when increaseButton Clicked', () => {
+    page.clickIncreaseButton().then(() => {
+      page.getIncreaseButton().click().then( () => {
+        expect(page.getIncreaseInput().getAttribute('value') ).toEqual('1');
+      });
+    });
+  });
+
+  it('should display ShipsComponent when ships clicked', () => {
+    page.clickShipsButton().then(() => {
+      expect(page.getShipsComponent).toBeTruthy();
+    });
   });
 });

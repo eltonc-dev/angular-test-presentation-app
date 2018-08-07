@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ShipResource } from '../../resources/ship.resource';
-import { Ship } from '../../models/Ship';
 
 @Component({
   selector: 'app-ship-list',
@@ -9,7 +8,7 @@ import { Ship } from '../../models/Ship';
 })
 export class ShipListComponent implements OnInit {
 
-  public shipList: Array<Ship>;
+  public shipList: Array<any>;
   public loading = true;
 
   constructor(private shipResource: ShipResource) { }
